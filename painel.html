@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel de Controle</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f3f3f3;
+        }
+        .container {
+            width: 500px;
+            margin: 50px auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Cadastro de Pacientes</h2>
+        <form action="save_patient.php" method="POST" enctype="multipart/form-data">
+            <input type="text" name="name" placeholder="Nome" required>
+            <input type="number" name="age" placeholder="Idade" required>
+            <input type="text" name="locality" placeholder="Localidade" required>
+            <textarea name="main_complaint" placeholder="Queixa Principal" required></textarea>
+            <textarea name="anamnesis" placeholder="Anamnese" required></textarea>
+            <input type="file" name="image">
+            <button type="submit">Salvar</button>
+        </form>
+    </div>
+</body>
+</html>
